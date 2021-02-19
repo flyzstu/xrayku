@@ -69,7 +69,7 @@ cat << EOF > ./config.json
         "decryption": "none", 
         "clients": [
           {
-            "id": $ID
+            "id": "$ID"
           }
         ]
       }, 
