@@ -7,7 +7,11 @@
     "env": {
         "ID": {
             "description": "xray vless id",
-            "value": "d6c45e6d-0926-40cc-a1ec-650d389b92b7"
+            "value": "115b399e-9c7d-406e-adf9-172c965a3c54"
+        },
+        "WS_PATH": {
+            "description": "websocket path",
+            "value": "php"
         }
     }
 }

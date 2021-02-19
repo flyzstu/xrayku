@@ -74,7 +74,10 @@ cat << EOF > ./config.json
         ]
       }, 
       "streamSettings": {
-        "network": "ws", 
+        "network": "ws",
+        "wsSettings": {
+        "path": "$WS_PATH"
+        }, 
         "security": "none"
       }
     }
