@@ -38,7 +38,7 @@ install_xray(){
 	XRAY_FILE="Xray-linux-${ARCH}.zip"
 	echo "Downloading binary file: ${XRAY_FILE}"
 
-	wget -O ${PWD}/Xray.zip https://cdn.jsdelivr.net/gh/wf09/Xray-release/"${XRAY_FILE}"
+	wget -O ${PWD}/Xray.zip "https://github.com/wf09/Xray-release/raw/master/${XRAY_FILE}"
 
 	if [ $? -ne 0 ]; then
 		echo "Error: Failed to download binary file: ${XRAY_FILE} " && exit 1
@@ -51,8 +51,8 @@ install_xray(){
 }
 
 install_dat(){
-	wget -O geoip.dat https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
-	wget -O geosite.dat https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+	wget -O geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+	wget -O geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
 	echo ".dat has been downloaded!"
 }
 install_config(){
