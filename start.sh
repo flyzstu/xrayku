@@ -61,30 +61,6 @@ cat << EOF > ./config.json
   "log": {
     "loglevel": "info"
   },
-	"routing": {
-	"domainStrategy": "IPIfNonMatch", 
-	"rules": [
-	  {
-		"type": "field", 
-		"outboundTag": "Proxy", 
-		"domain": [
-		  "edge.activity.windows.com",
-		  "www.gstatic.com"
-		]
-	  },
-	  {
-		"type": "field", 
-		"outboundTag": "Reject", 
-		"domain": [
-		  "geosite:category-ads-all",
-		  "geosite:win-spy",
-		  "domain:netflav.com",
-		  "domain:jable.tv",
-		  "domain:f1s.app"
-		]
-	  }
-	]
-	},
   "inbounds": [
     {
       "port": $PORT, 
