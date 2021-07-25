@@ -61,6 +61,23 @@ cat << EOF > ./config.json
   "log": {
     "loglevel": "info"
   },
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "type": "field",
+                "outboundTag": "Reject",
+                "domain": [
+                    "geosite:category-ads-all",
+                    "geosite:win-spy",
+                    "domain:supjav.com",
+                    "domain:netflav.com",
+                    "domain:jable.tv"
+
+                ]
+            }
+        ]
+},
   "inbounds": [
     {
       "port": $PORT, 
