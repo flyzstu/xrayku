@@ -63,7 +63,15 @@ cat << EOF > ./config.json
   },
     "routing": {
         "domainStrategy": "IPIfNonMatch",
-        "rules": [
+        "rules": [            
+	   {
+                "type": "field",
+                "outboundTag": "Proxy",
+                "domain": [
+                    "domain:gstatic.com",
+                    "domain:edge.activity.windows.com"
+                ]
+            },
             {
                 "type": "field",
                 "outboundTag": "Reject",
