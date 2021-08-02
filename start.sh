@@ -77,8 +77,10 @@ cat << EOF > ./config.json
                 "outboundTag": "Reject",
                 "domain": [
                     "geosite:category-ads-all",
-                    "geosite:win-spy"
-
+                    "geosite:win-spy",
+		    "domain:jable.tv",
+		    "domain:supjav.com",
+		    "domain:netflav.com"
                 ]
             }
         ]
