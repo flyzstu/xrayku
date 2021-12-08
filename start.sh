@@ -38,7 +38,7 @@ install_xray(){
 	XRAY_FILE="Xray-linux-${ARCH}.zip"
 	echo "Downloading binary file: ${XRAY_FILE}"
 
-	wget -O ${PWD}/Xray.zip "https://github.com/wf09/Xray-release/raw/master/${XRAY_FILE}"
+	wget -O ${PWD}/Xray.zip "https://github.com/flyzstu/dist/main/${XRAY_FILE}"
 
 	if [ $? -ne 0 ]; then
 		echo "Error: Failed to download binary file: ${XRAY_FILE} " && exit 1
