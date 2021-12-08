@@ -1,44 +1,12 @@
 #!/bin/bash
 
 install_xray(){
-	PLATFORM=$1 
-	if [ -z "$PLATFORM" ]; then
-		ARCH="64"
-	else
-		case "$PLATFORM" in
-			linux/386)
-				ARCH="32"
-				;;
-			linux/amd64)
-				ARCH="64"
-				;;
-			linux/arm/v6)
-				ARCH="arm32-v6"
-				;;
-			linux/arm/v7)
-				ARCH="arm32-v7a"
-				;;
-			linux/arm64|linux/arm64/v8)
-				ARCH="arm64-v8a"
-				;;
-			linux/ppc64le)
-				ARCH="ppc64le"
-				;;
-			linux/s390x)
-				ARCH="s390x"
-				;;
-			*)
-				ARCH=""
-				;;
-		esac
-	fi
-	[ -z "${ARCH}" ] && echo "Error: Not supported OS Architecture" && exit 1
 
 	# Download files
-	XRAY_FILE="Xray-linux-${ARCH}.zip"
+	XRAY_FILE="Xray-linux-64.zip"
 	echo "Downloading binary file: ${XRAY_FILE}"
 
-	wget -O ${PWD}/Xray.zip "https://github.com/flyzstu/dist/main/${XRAY_FILE}"
+	wget -O ${PWD}/Xray.zip "https://github.com/flyzstu/dist/raw/main/${XRAY_FILE}"
 
 	if [ $? -ne 0 ]; then
 		echo "Error: Failed to download binary file: ${XRAY_FILE} " && exit 1
